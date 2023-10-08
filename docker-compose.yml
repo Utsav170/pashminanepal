@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  pashmina-nepal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pashminanepal_api
+    restart: always
+    environment:
+      - PORT=${PORT}
+    ports:
+      - 3001:3000
+    networks:
+      - pashminanepal
+    volumes:
+      - ./src:/app/src
+networks:
+  pashminanepal:
