@@ -1,7 +1,7 @@
 # Base image
 FROM node:16.14.2
 
-# Create app directory
+# Create app directory, in our container/in our image
 WORKDIR /usr/src/app
 
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
