@@ -23,6 +23,7 @@ services:
       dockerfile: Dockerfile
     container_name: pashminanepal_api
     restart: always
+    command: yarn start:dev
     env_file:
       - .env
     environment:
@@ -34,6 +35,7 @@ services:
     depends_on:
       - mariadb
     volumes:
+      - .:/usr/src/app
       - /usr/src/app/node_modules
 networks:
   pashminanepal:
